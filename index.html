@@ -1,68 +1,956 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
+    <title>Portfolio | Web Developer & AI Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-900 text-slate-200 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
-    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
-        <h1 class="text-2xl font-bold tracking-tighter text-white">Dev<span class="text-blue-500">Port</span>.</h1>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-            <a href="#github" class="hover:text-blue-400 transition">GitHub</a>
+<body class="bg-[#0a0e27] text-gray-100 font-sans antialiased">
+
+    <nav class="bg-[#161b3a] backdrop-blur-lg shadow-lg sticky top-0 z-50 nav-bar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div
+                    class="flex-shrink-0 font-bold text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform">
+                    Portfolio.</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">About</a>
+                    <a href="#academics"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Academics</a>
+                    <a href="#experience"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Experience</a>
+                    <a href="#skills"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Skills</a>
+                    <a href="#achievements"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Achievements</a>
+                    <a href="#projects"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Projects</a>
+                    <a href="#contact"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300 nav-link">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">
-        <div class="flex-1 space-y-6">
-            <h2 class="text-5xl md:text-6xl font-bold leading-tight text-white">
-                Hello, I'm <br> <span class="text-blue-500">Abdul Rafay Umar</span>
-            </h2>
-            <p class="text-lg text-slate-400 max-w-lg">
-                Frontend Developer & Open Source Enthusiast. I build clean, modern interfaces and love turning complex problems into simple, beautiful designs.
-            </p>
-            <div class="pt-4 flex space-x-4">
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">View My Work</a>
-                <a href="mailto:rafayumar176@gmail.com" class="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
-            </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center py-20 px-4 overflow-hidden hero-section">
+        <!-- Background gradients -->
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20 pointer-events-none">
         </div>
-        <div class="flex-1 hidden md:block">
-            <div class="w-72 h-72 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full blur-3xl opacity-20 mx-auto"></div>
-        </div>
-    </header>
 
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-bold text-white mb-10 border-b border-slate-800 pb-4">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition duration-300 group">
-                <div class="h-48 bg-slate-700 flex items-center justify-center text-slate-500">
-                    [Project Screenshot Here]
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="flex flex-col space-y-6" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Freelance Web Developer & <span
+                            class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">AI
+                            Specialist</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 leading-relaxed max-w-lg">
+                        Hi! I specialize in creating modern web solutions and intelligent AI automations. From front-end
+                        development to data science, I build systems that solve real-world problems.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#projects"
+                            class="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 font-medium transform hover:scale-105">View
+                            My Work</a>
+                        <a href="#contact"
+                            class="px-8 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400/10 transition-all duration-300 font-medium transform hover:scale-105">Contact
+                            Me</a>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition">Project Title</h3>
-                    <p class="text-slate-400 text-sm mb-4">A brief description of what this project does and the technologies used to build it.</p>
-                    <div class="flex space-x-3 text-xs font-semibold">
-                        <span class="bg-slate-900 text-blue-400 px-3 py-1 rounded-full">React</span>
-                        <span class="bg-slate-900 text-blue-400 px-3 py-1 rounded-full">Tailwind</span>
+
+                <!-- Right Content: Picture/Video Overlap -->
+                <div class="relative h-[500px] md:h-[600px]" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <!-- Video in background -->
+                    <div
+                        class="absolute bottom-0 right-0 w-[85%] h-[75%] bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20">
+                        <video controls class="w-full h-full object-cover"
+                            style="background: linear-gradient(135deg, #1e2749 0%, #161b3a 100%);">
+                            <source src="YOUR_PRESENTATION_VIDEO.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="absolute inset-0 border border-blue-500/30 rounded-2xl pointer-events-none"></div>
+                    </div>
+
+                    <!-- Profile Picture on top/left -->
+                    <div
+                        class="absolute top-0 left-0 w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/40 border-4 border-purple-400/30 image-frame">
+                        <img src="YOUR_PROFESSIONAL_PHOTO_URL.jpg" alt="Professional Photo"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 pointer-events-none">
+                        </div>
                     </div>
                 </div>
             </div>
-
-            </div>
-    </section>
-
-    <section id="github" class="max-w-6xl mx-auto px-6 py-20 mb-20">
-        <h2 class="text-3xl font-bold text-white mb-10 border-b border-slate-800 pb-4">Latest Repositories</h2>
-        <div id="repo-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <p class="text-slate-400">Loading repositories...</p>
         </div>
     </section>
 
+    <!-- About Section with Carousel -->
+    <section id="about" class="py-20 bg-[#0f1729] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">About Me</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I am currently pursuing my BS in Computer Science at UET. I am deeply passionate about bridging
+                        the gap between responsive web design and cutting-edge artificial intelligence.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I offer technical services focused on front-end architectures and AI agent development,
+                        continually striving to learn and implement modern tech stacks.
+                    </p>
+                    <div class="pt-4">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4">Key Interests</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-purple-400 mr-3"></i>Modern
+                                Web Development</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-purple-400 mr-3"></i>AI Agent
+                                Development</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-purple-400 mr-3"></i>Data
+                                Science & ML</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check text-purple-400 mr-3"></i>Automation Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Carousel -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                    <div
+                        class="carousel-container bg-[#161b3a] rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-blue-500/30">
+                        <div class="carousel-slides relative h-96">
+                            <!-- Placeholder slides - will be filled with project screenshots -->
+                            <div class="carousel-slide absolute w-full h-full transition-opacity duration-500">
+                                <div
+                                    class="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-images text-6xl text-white/50 mb-4"></i>
+                                        <p class="text-white/70">Project Screenshot 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="carousel-slide absolute w-full h-full transition-opacity duration-500 opacity-0">
+                                <div
+                                    class="w-full h-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-images text-6xl text-white/50 mb-4"></i>
+                                        <p class="text-white/70">Project Screenshot 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="carousel-slide absolute w-full h-full transition-opacity duration-500 opacity-0">
+                                <div
+                                    class="w-full h-full bg-gradient-to-br from-pink-600 to-red-600 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-images text-6xl text-white/50 mb-4"></i>
+                                        <p class="text-white/70">Project Screenshot 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <div class="absolute inset-0 flex items-center justify-between px-6 pointer-events-none">
+                            <button
+                                class="carousel-prev pointer-events-auto bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fa-solid fa-chevron-left text-xl"></i>
+                            </button>
+                            <button
+                                class="carousel-next pointer-events-auto bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fa-solid fa-chevron-right text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Dots -->
+                        <div
+                            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 pointer-events-auto">
+                            <div
+                                class="carousel-dot w-2 h-2 bg-white rounded-full cursor-pointer transition-all duration-300 active">
+                            </div>
+                            <div
+                                class="carousel-dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all duration-300">
+                            </div>
+                            <div
+                                class="carousel-dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-20 bg-[#0a0e27] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-l from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Academic Journey</h2>
+
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Current Education -->
+                <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
+                    data-aos="fade-up">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-graduation-cap text-2xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white">Bachelor of Science (BS) Computer Science
+                                    </h3>
+                                    <p class="text-lg text-blue-400 font-medium">University of Engineering and
+                                        Technology (UET), Lahore</p>
+                                </div>
+                                <span
+                                    class="px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full">Starting
+                                    Next Month</span>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed mt-3">
+                                Pursuing advanced studies in Computer Science with focus on software development,
+                                artificial intelligence, and modern technologies. Building strong foundations in
+                                algorithms, data structures, and system design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Education -->
+                <div class="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-book text-2xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white">F.Sc Pre-Medical</h3>
+                                    <p class="text-lg text-purple-400 font-medium">KIPS College Lahore</p>
+                                </div>
+                                <span
+                                    class="px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full">2023
+                                    - 2025</span>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed mt-3">
+                                Completed intermediate education with focus on science subjects. Achieved strong
+                                academic performance and developed foundational knowledge in mathematics, physics, and
+                                chemistry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-[#0f1729] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">My Journey</h2>
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl shadow-xl shadow-blue-500/20 border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300"
+                data-aos="fade-up">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Website Developer</h3>
+                        <p class="text-blue-400 font-medium text-lg">Nextgraphics.pk</p>
+                    </div>
+                    <span
+                        class="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-4 py-2 rounded-full font-semibold">Current</span>
+                </div>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Currently associated as the lead website developer, handling a complete website overhaul.
+                    Transitioning the platform into a modern, responsive site utilizing HTML, CSS, JavaScript, and
+                    Tailwind CSS with interactive UI components and smooth animations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-[#0a0e27] py-20 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-l from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Technical Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend Development -->
+                <div class="group p-8 border border-blue-500/30 rounded-2xl bg-gradient-to-br from-blue-600/10 to-blue-400/5 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                    data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-6 text-blue-400 border-b border-blue-500/30 pb-3">
+                        <i class="fa-solid fa-code text-blue-400 mr-3"></i>Front-End Development
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/40 text-blue-300 rounded-lg text-sm font-medium transition-colors duration-300">HTML/CSS</span>
+                        <span
+                            class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/40 text-blue-300 rounded-lg text-sm font-medium transition-colors duration-300">JavaScript</span>
+                        <span
+                            class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/40 text-blue-300 rounded-lg text-sm font-medium transition-colors duration-300">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/40 text-blue-300 rounded-lg text-sm font-medium transition-colors duration-300">Bootstrap</span>
+                        <span
+                            class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/40 text-blue-300 rounded-lg text-sm font-medium transition-colors duration-300">PHP
+                            & SQL</span>
+                    </div>
+                </div>
+
+                <!-- AI & Data Science -->
+                <div class="group p-8 border border-purple-500/30 rounded-2xl bg-gradient-to-br from-purple-600/10 to-purple-400/5 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-6 text-purple-400 border-b border-purple-500/30 pb-3">
+                        <i class="fa-solid fa-robot text-purple-400 mr-3"></i>AI & Data Science
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 rounded-lg text-sm font-medium transition-colors duration-300">AI
+                            Agent Development</span>
+                        <span
+                            class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 rounded-lg text-sm font-medium transition-colors duration-300">AI
+                            Automations</span>
+                        <span
+                            class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 rounded-lg text-sm font-medium transition-colors duration-300">Data
+                            Science</span>
+                        <span
+                            class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 rounded-lg text-sm font-medium transition-colors duration-300">Machine
+                            Learning</span>
+                    </div>
+                </div>
+
+                <!-- Language Proficiency -->
+                <div class="group p-8 border border-pink-500/30 rounded-2xl bg-gradient-to-br from-pink-600/10 to-pink-400/5 hover:border-pink-500/60 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-6 text-pink-400 border-b border-pink-500/30 pb-3">
+                        <i class="fa-solid fa-language text-pink-400 mr-3"></i>Language Proficiency
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="font-medium text-gray-300">English</span>
+                            <div class="flex space-x-1">
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="font-medium text-gray-300">German</span>
+                            <div class="flex space-x-1">
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="font-medium text-gray-300">Urdu</span>
+                            <div class="flex space-x-1">
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section with Carousel -->
+    <section id="achievements" class="py-20 bg-[#0f1729] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Achievements & Recognition</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Achievement Card 1 -->
+                <div class="bg-gradient-to-br from-blue-600/20 to-blue-400/5 border border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                    data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-trophy text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">3rd Position Award</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Achieved 3rd position in the Award Ceremony, recognizing outstanding performance and dedication
+                        to academic and technical excellence.
+                    </p>
+                </div>
+
+                <!-- Achievement Card 2 -->
+                <div class="bg-gradient-to-br from-purple-600/20 to-purple-400/5 border border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-microphone text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Tech Speaker</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Speaker at tech conferences sharing insights on AI automations, no-code solutions, and modern
+                        development practices with industry professionals.
+                    </p>
+                </div>
+
+                <!-- Achievement Card 3 -->
+                <div class="bg-gradient-to-br from-pink-600/20 to-pink-400/5 border border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/60 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-pink-400 to-red-400 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-star text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Industry Recognition</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Recognized for expertise in AI agent development and automation solutions, contributing to
+                        innovative tech projects and industry advancements.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Achievement Carousel -->
+            <div class="relative mt-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Speaking Engagements</h3>
+                    <p class="text-gray-300">Sharing expertise at tech conferences and industry events</p>
+                </div>
+
+                <div
+                    class="achievements-carousel-container bg-[#161b3a] rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-blue-500/30">
+                    <div class="achievements-carousel-slides relative h-80 md:h-96">
+                        <!-- Placeholder carousel items - replace with actual images from assets -->
+                        <div class="achievements-carousel-slide absolute w-full h-full transition-opacity duration-500">
+                            <div
+                                class="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-image text-6xl text-white/50 mb-4"></i>
+                                    <p class="text-white/70">Conference Photo 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="achievements-carousel-slide absolute w-full h-full transition-opacity duration-500 opacity-0">
+                            <div
+                                class="w-full h-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-image text-6xl text-white/50 mb-4"></i>
+                                    <p class="text-white/70">Conference Photo 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="achievements-carousel-slide absolute w-full h-full transition-opacity duration-500 opacity-0">
+                            <div
+                                class="w-full h-full bg-gradient-to-br from-pink-600 to-red-600 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-image text-6xl text-white/50 mb-4"></i>
+                                    <p class="text-white/70">Conference Photo 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <div class="absolute inset-0 flex items-center justify-between px-6 pointer-events-none">
+                        <button
+                            class="achievements-carousel-prev pointer-events-auto bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-110">
+                            <i class="fa-solid fa-chevron-left text-xl"></i>
+                        </button>
+                        <button
+                            class="achievements-carousel-next pointer-events-auto bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 transform hover:scale-110">
+                            <i class="fa-solid fa-chevron-right text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Dots -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 pointer-events-auto">
+                        <div
+                            class="achievements-carousel-dot w-2 h-2 bg-white rounded-full cursor-pointer transition-all duration-300 active">
+                        </div>
+                        <div
+                            class="achievements-carousel-dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all duration-300">
+                        </div>
+                        <div
+                            class="achievements-carousel-dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-[#0a0e27] text-gray-300 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-l from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Open Source & Projects</h2>
+            <p class="text-center text-gray-400 mb-12" data-aos="fade-up">Showcasing implementations across AI, Machine
+                Learning, and Full-Stack Development.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">
+                                    AI-Automations-Workflows</h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">A comprehensive repository exploring
+                            customized automated solutions and smart agent setups utilizing modern integration tools.
+                        </p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-yellow-400 mr-1.5"></span>JavaScript</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 0</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 0</div>
+                            <div>Updated 2 months ago</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">ai-automations</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">javascript</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <div class="border border-[#30363d] bg-[#0d1117] rounded-lg p-4 mb-3">
+                            <div class="flex items-center justify-between text-gray-300 mb-2">
+                                <div class="flex items-center text-sm font-medium"><i
+                                        class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>
+                                    AI-Automations-Workflows</div>
+                                <i class="fa-solid fa-arrow-right text-gray-500 text-sm"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-3 truncate">A comprehensive repository exploring
+                                customized automated solutions...</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex items-center"><span
+                                            class="w-2.5 h-2.5 rounded-full bg-yellow-400 mr-1.5"></span>JavaScript
+                                    </div>
+                                    <div class="flex items-center"><i class="fa-regular fa-star mr-1"></i> 0</div>
+                                </div>
+                                <div>Updated 2 months ago</div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">MERN-Stack-Apps</h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">A comprehensive collection of MERN stack
+                            projects covering fundamental concepts, RESTful APIs, database integration, and modern web
+                            development.</p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-yellow-400 mr-1.5"></span>JavaScript</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 2</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 1</div>
+                            <div>Updated 4 months ago</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">mern</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">react</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">web-dev</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <div class="border border-[#30363d] bg-[#0d1117] rounded-lg p-4 mb-3">
+                            <div class="flex items-center justify-between text-gray-300 mb-2">
+                                <div class="flex items-center text-sm font-medium"><i
+                                        class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i> MERN-Stack-Apps</div>
+                                <i class="fa-solid fa-arrow-right text-gray-500 text-sm"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-3 truncate">A comprehensive collection of MERN stack
+                                projects covering...</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex items-center"><span
+                                            class="w-2.5 h-2.5 rounded-full bg-yellow-400 mr-1.5"></span>JavaScript
+                                    </div>
+                                    <div class="flex items-center"><i class="fa-regular fa-star mr-1"></i> 2</div>
+                                </div>
+                                <div>Updated 4 months ago</div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">
+                                    Machine-Learning-Models</h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">A repository exploring Machine Learning and
+                            Deep Learning algorithms, covering data science fundamentals and predictive modeling for
+                            beginners to advanced learners.</p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-blue-500 mr-1.5"></span>Python</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 1</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 0</div>
+                            <div>Updated 6 months ago</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">machine-learning</span>
+                            <span
+                                class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">deep-learning</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">python</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <div class="border border-[#30363d] bg-[#0d1117] rounded-lg p-4 mb-3">
+                            <div class="flex items-center justify-between text-gray-300 mb-2">
+                                <div class="flex items-center text-sm font-medium"><i
+                                        class="fa-solid fa-book-bookmark mr-2 text-gray-400"></i>
+                                    Machine-Learning-Models</div>
+                                <i class="fa-solid fa-arrow-right text-gray-500 text-sm"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-3 truncate">A repository exploring Machine Learning and
+                                Deep Learning...</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex items-center"><span
+                                            class="w-2.5 h-2.5 rounded-full bg-blue-500 mr-1.5"></span>Python</div>
+                                    <div class="flex items-center"><i class="fa-regular fa-star mr-1"></i> 1</div>
+                                </div>
+                                <div>Updated 6 months ago</div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Additional GitHub Card 1 -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left hover:border-[#58a6ff] transition-colors duration-300"
+                    data-aos="fade-up">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">Your-Project-Name-1
+                                </h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">Add your project description here. This card
+                            is ready for you to populate with your actual GitHub repository details and links.</p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-yellow-400 mr-1.5"></span>JavaScript</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 0</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 0</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag1</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag2</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Additional GitHub Card 2 -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left hover:border-[#58a6ff] transition-colors duration-300"
+                    data-aos="fade-up">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">Your-Project-Name-2
+                                </h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">Add your project description here. This card
+                            is ready for you to populate with your actual GitHub repository details and links.</p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-blue-500 mr-1.5"></span>Python</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 0</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 0</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag1</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag2</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Additional GitHub Card 3 -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl flex flex-col justify-between text-left hover:border-[#58a6ff] transition-colors duration-300"
+                    data-aos="fade-up">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex items-center text-white">
+                                <i class="fa-brands fa-github text-xl mr-2"></i>
+                                <h3 class="font-bold text-lg hover:text-[#58a6ff] cursor-pointer">Your-Project-Name-3
+                                </h3>
+                            </div>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full border border-[#2ea043] text-[#3fb950] font-medium">Public</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 line-clamp-3">Add your project description here. This card
+                            is ready for you to populate with your actual GitHub repository details and links.</p>
+                        <div class="flex flex-wrap items-center text-xs text-gray-400 mb-4 space-x-4">
+                            <div class="flex items-center"><span
+                                    class="w-3 h-3 rounded-full bg-red-500 mr-1.5"></span>TypeScript</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-regular fa-star mr-1"></i> 0</div>
+                            <div class="flex items-center hover:text-[#58a6ff] cursor-pointer"><i
+                                    class="fa-solid fa-code-fork mr-1"></i> 0</div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag1</span>
+                            <span class="text-xs text-[#58a6ff] bg-[#1f2937]/50 px-2 py-1 rounded-md">tag2</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="#"
+                            class="block w-full py-2 text-sm font-medium text-center text-gray-300 bg-[#21262d] hover:bg-[#30363d] rounded-md transition-colors border border-[#30363d]">
+                            <i class="fa-brands fa-github mr-1"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificates" class="py-20 bg-[#0f1729] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                <!-- Certification 1 -->
+                <div class="flex items-start p-8 bg-gradient-to-br from-blue-600/20 to-blue-400/5 rounded-2xl border border-blue-500/30 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                    data-aos="fade-up">
+                    <div class="flex-shrink-0 text-blue-400 mr-6 mt-1 floating-icon">
+                        <i class="fa-solid fa-award text-4xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Certificate in Technology (CIT-02 Batch 03)</h3>
+                        <p class="text-sm text-blue-400 mt-2">Issued by NAVTTC</p>
+                        <p class="text-sm text-gray-300 mt-3">Formal certification demonstrating foundational and
+                            technical proficiencies in the technology sector with hands-on practical experience.</p>
+                    </div>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="flex items-start p-8 bg-gradient-to-br from-purple-600/20 to-purple-400/5 rounded-2xl border border-purple-500/30 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex-shrink-0 text-purple-400 mr-6 mt-1 floating-icon">
+                        <i class="fa-solid fa-award text-4xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Diploma in Full Stack Web Development</h3>
+                        <p class="text-sm text-purple-400 mt-2">With Agentic AI & Data Science</p>
+                        <p class="text-sm text-gray-300 mt-3">Advanced diploma bridging comprehensive full-stack web
+                            development with intelligent AI agent integrations and data analysis capabilities.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#0a0e27] relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-l from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                data-aos="fade-down">Let's Connect</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <p class="text-center text-gray-300 text-lg mb-12" data-aos="fade-up">
+                    I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Email -->
+                    <a href="mailto:rafayumar176@gmail.com"
+                        class="group flex flex-col items-center p-6 bg-gradient-to-br from-blue-600/20 to-blue-400/5 border border-blue-500/30 rounded-2xl hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-110">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                            <i class="fa-solid fa-envelope text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-center">Email</h3>
+                        <p class="text-xs text-gray-400 text-center mt-2">Get in touch</p>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/Rafayumar-sci" target="_blank" rel="noopener noreferrer"
+                        class="group flex flex-col items-center p-6 bg-gradient-to-br from-gray-600/20 to-gray-400/5 border border-gray-500/30 rounded-2xl hover:border-gray-500/60 hover:shadow-lg hover:shadow-gray-500/20 transition-all duration-300 hover:scale-110">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                            <i class="fa-brands fa-github text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-center">GitHub</h3>
+                        <p class="text-xs text-gray-400 text-center mt-2">View projects</p>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                        class="group flex flex-col items-center p-6 bg-gradient-to-br from-blue-500/20 to-blue-400/5 border border-blue-500/30 rounded-2xl hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-110">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                            <i class="fa-brands fa-linkedin text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-center">LinkedIn</h3>
+                        <p class="text-xs text-gray-400 text-center mt-2">Professional</p>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/923160666461" target="_blank" rel="noopener noreferrer"
+                        class="group flex flex-col items-center p-6 bg-gradient-to-br from-green-600/20 to-green-400/5 border border-green-500/30 rounded-2xl hover:border-green-500/60 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 hover:scale-110">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                            <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-center">WhatsApp</h3>
+                        <p class="text-xs text-gray-400 text-center mt-2">Chat now</p>
+                    </a>
+                </div>
+
+                <p class="text-center text-gray-400 text-sm mt-12" data-aos="fade-up">
+                    📞 Phone: +92 316 066 6461 | 📧 Email: rafayumar176@gmail.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#161b3a] text-white py-12 border-t border-blue-500/20 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <div class="mb-6">
+                <h3
+                    class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                    Abdul Rafay Umar</h3>
+                <p class="text-gray-400">Web Developer & AI Specialist</p>
+            </div>
+            <p class="text-gray-400 mb-4">&copy; 2026 Portfolio. All rights reserved. | Crafted with <i
+                    class="fa-solid fa-heart text-red-400"></i> by Abdul Rafay</p>
+            <div class="flex justify-center gap-6 text-sm text-gray-500">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="#" class="hover:text-blue-400 transition-colors">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

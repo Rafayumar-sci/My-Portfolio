@@ -1,55 +1,212 @@
+// ==================== AOS INITIALIZATION ====================
+
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100,
+});
+
+// ==================== SMOOTH SCROLL ====================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ==================== CAROUSEL FUNCTIONALITY ====================
+
+class Carousel {
+    constructor(containerSelector, prevSelector, nextSelector, dotSelector, slideSelector) {
+        this.container = document.querySelector(containerSelector);
+        this.prevBtn = this.container?.querySelector(prevSelector);
+        this.nextBtn = this.container?.querySelector(nextSelector);
+        this.dots = this.container?.querySelectorAll(dotSelector);
+        this.slides = this.container?.querySelectorAll(slideSelector);
+        this.currentIndex = 0;
+        this.autoplayInterval = null;
+
+        if (this.slides && this.slides.length > 0) {
+            this.init();
+        }
+    }
+
+    init() {
+        this.prevBtn?.addEventListener('click', () => this.prevSlide());
+        this.nextBtn?.addEventListener('click', () => this.nextSlide());
+        this.dots?.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        this.startAutoplay();
+        this.container?.addEventListener('mouseenter', () => this.stopAutoplay());
+        this.container?.addEventListener('mouseleave', () => this.startAutoplay());
+    }
+
+    showSlide(index) {
+        if (!this.slides || this.slides.length === 0) return;
+
+        // Wrap index
+        if (index >= this.slides.length) {
+            this.currentIndex = 0;
+        } else if (index < 0) {
+            this.currentIndex = this.slides.length - 1;
+        } else {
+            this.currentIndex = index;
+        }
+
+        // Hide all slides
+        this.slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0';
+        });
+
+        // Show current slide
+        this.slides[this.currentIndex].classList.add('active');
+        this.slides[this.currentIndex].style.opacity = '1';
+
+        // Update dots
+        this.dots?.forEach((dot, index) => {
+            if (index === this.currentIndex) {
+                dot.classList.add('active');
+                dot.style.width = '8px';
+            } else {
+                dot.classList.remove('active');
+                dot.style.width = '6px';
+            }
+        });
+    }
+
+    nextSlide() {
+        this.showSlide(this.currentIndex + 1);
+        this.resetAutoplay();
+    }
+
+    prevSlide() {
+        this.showSlide(this.currentIndex - 1);
+        this.resetAutoplay();
+    }
+
+    goToSlide(index) {
+        this.showSlide(index);
+        this.resetAutoplay();
+    }
+
+    startAutoplay() {
+        this.autoplayInterval = setInterval(() => {
+            this.showSlide(this.currentIndex + 1);
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+        }
+    }
+
+    resetAutoplay() {
+        this.stopAutoplay();
+        this.startAutoplay();
+    }
+}
+
+// Initialize carousels
+document.addEventListener('DOMContentLoaded', () => {
+    // About section carousel
+    const aboutCarousel = new Carousel(
+        '.carousel-container',
+        '.carousel-prev',
+        '.carousel-next',
+        '.carousel-dot',
+        '.carousel-slide'
+    );
+
+    // Achievements section carousel
+    const achievementsCarousel = new Carousel(
+        '.achievements-carousel-container',
+        '.achievements-carousel-prev',
+        '.achievements-carousel-next',
+        '.achievements-carousel-dot',
+        '.achievements-carousel-slide'
+    );
+
+    // Initialize first slides
+    if (aboutCarousel.slides && aboutCarousel.slides.length > 0) {
+        aboutCarousel.showSlide(0);
+    }
+    if (achievementsCarousel.slides && achievementsCarousel.slides.length > 0) {
+        achievementsCarousel.showSlide(0);
+    }
+});
+
+// ==================== ACTIVE NAV LINK ====================
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('section[id]');
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 300) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('text-blue-400');
+        link.classList.add('text-gray-300');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.remove('text-gray-300');
+            link.classList.add('text-blue-400');
+        }
+    });
+});
+
+// ==================== GITHUB REPOS FETCHER ====================
+
 // MUST UPDATE: Change this to your actual GitHub username!
-const githubUsername = 'Rafayumar-sci'; 
-const repoContainer = document.getElementById('repo-container');
+const githubUsername = 'Rafayumar-sci';
 
 async function fetchGitHubRepos() {
     try {
-        // Fetch public repos, sorted by recently updated, limited to 6
-        const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`);
-        
+        // Fetch public repos, sorted by recently updated, limited to 3 (for optional use)
+        const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`);
+
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
 
         const repos = await response.json();
-        
-        // Clear the "Loading..." text
-        repoContainer.innerHTML = '';
+        console.log('GitHub repos fetched:', repos);
 
-        // Generate a card for each repository
-        repos.forEach(repo => {
-            const card = document.createElement('div');
-            card.className = 'bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800 transition duration-300 flex flex-col justify-between';
-            
-            card.innerHTML = `
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                        <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
-                            ${repo.name}
-                        </a>
-                    </h3>
-                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">
-                        ${repo.description || 'No description provided.'}
-                    </p>
-                </div>
-                <div class="flex items-center justify-between text-xs text-slate-500 mt-4">
-                    <div class="flex items-center space-x-3">
-                        <span class="flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            ${repo.stargazers_count}
-                        </span>
-                        <span>${repo.language || 'N/A'}</span>
-                    </div>
-                </div>
-            `;
-            repoContainer.appendChild(card);
+        // Log them for reference - can be used to populate the static cards if needed
+        repos.forEach((repo, index) => {
+            console.log(`Repo ${index + 1}: ${repo.name} - ${repo.html_url}`);
         });
 
     } catch (error) {
         console.error('Error fetching repos:', error);
-        repoContainer.innerHTML = '<p class="text-red-400 col-span-full">Failed to load repositories. Please check the GitHub username.</p>';
     }
 }
 
-// Run the function when the page loads
-fetchGitHubRepos();
+// Uncomment to fetch and display in console
+// fetchGitHubRepos();
+
+// ==================== PAGE LOAD ANIMATION ====================
+
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// Trigger AOS animations on page load
+window.addEventListener('load', () => {
+    AOS.refresh();
+});
